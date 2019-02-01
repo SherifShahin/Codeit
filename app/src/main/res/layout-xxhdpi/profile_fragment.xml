@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_swipeRefresh"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/profile_default_img"
+            android:layout_marginTop="13dp"
+            android:id="@+id/profile_image"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sherif Shahin"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:padding="2dp"
+            android:id="@+id/profile_name"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_margin="14dp"
+            android:orientation="horizontal"
+            android:background="@drawable/empty_shape"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/posts_icon"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    />
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="?"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_posts_number"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="14dp"
+                    android:text="Posts"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/profile_likes_layout"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/like"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="?"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_likes_number"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="14dp"
+                    android:text="Likes"
+                    android:textSize="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/profile_followers_layout"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/followers_icon"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    />
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="?"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_followers_number"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="14dp"
+                    android:text="Followers"
+                    android:textSize="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/profile_following_layout"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/followers_icon"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    />
+
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="?"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_following_number"
+                    />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="14dp"
+                    android:text="Following"
+                    android:textSize="11dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="2dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:id="@+id/tab_layout"
+            android:background="@android:color/white"
+            app:tabTextColor="#808080"
+            app:tabIndicatorColor="@android:color/holo_blue_dark"
+            app:tabSelectedTextColor="@android:color/holo_blue_dark"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager"
+            >
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

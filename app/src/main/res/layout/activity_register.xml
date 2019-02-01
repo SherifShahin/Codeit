@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".Activity.Register"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo_main" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:padding="17dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Name"
+            android:textColor="#404040"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Full Name"
+            android:textColorHint="#bfbfbf"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/Register_name"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="User Name"
+            android:textColor="#404040"
+            android:textSize="14dp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Unique Username"
+            android:textColorHint="#bfbfbf"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/Register_username"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Email"
+            android:textColor="#404040"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="example@example.com"
+            android:textColorHint="#bfbfbf"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/Register_email"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Password"
+            android:textColor="#404040"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:hint="Strong Password"
+            android:textColorHint="#bfbfbf"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:inputType="textPassword"
+            android:id="@+id/Register_password"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:background="@drawable/signup_bt_shape"
+        android:text="REGISTER"
+        android:textColor="@android:color/white"
+        android:id="@+id/register_activity_bt"
+        />
+
+
+</LinearLayout>
+</ScrollView>

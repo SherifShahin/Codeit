@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Name"
+            android:textColor="#404040"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/profile_info_name"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Email"
+            android:textColor="#404040"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/profile_info_email"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Password"
+            android:textColor="#404040"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textSize="14dp"
+            android:textColor="@android:color/darker_gray"
+            android:inputType="textPassword"
+            android:id="@+id/profile_info_password"
+            />
+    </LinearLayout>
+
+<Button
+    android:layout_width="260dp"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:background="@drawable/login_bt_shape"
+    android:textColor="@android:color/white"
+    android:text="edit profile"
+    android:layout_margin="10dp"
+    android:textSize="16dp"
+    android:gravity="center"
+    android:id="@+id/info_update_bt"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/signup_bt_shape"
+        android:textColor="@android:color/white"
+        android:text="Logout"
+        android:layout_margin="10dp"
+        android:paddingRight="100dp"
+        android:paddingLeft="100dp"
+        android:textSize="17dp"
+        android:id="@+id/logout_bt"
+        />
+
+    </LinearLayout>
+</ScrollView>

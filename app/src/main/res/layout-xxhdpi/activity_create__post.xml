@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Create_Post"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/main_app_bar"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/create_post_progressbar"
+        android:progressDrawable="@drawable/progressbarcolor"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="31dp"
+        android:text="+ Add Cover Image"
+        android:textSize="11dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_margin="10dp"
+        android:background="@drawable/empty_shape"
+        android:id="@+id/post_cover_image"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Title"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/post_title"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/empty_shape"
+        android:hint="Post"
+        android:layout_weight="9"
+        android:gravity="left|top"
+        android:padding="4dp"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/post_text"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="17dp"
+        android:text="Post"
+        android:layout_margin="30dp"
+        android:background="@drawable/login_bt_shape"
+        android:textColor="@android:color/white"
+        android:id="@+id/post_create_bt"
+        />
+
+
+
+</LinearLayout>

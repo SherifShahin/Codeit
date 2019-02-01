@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="6dp"
+    android:background="@android:color/white"
+    android:id="@+id/profile_followers_list_item_layout"
+    android:layout_margin="5dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/profile_default_img"
+        android:id="@+id/profile_followers_list_item_img"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/profile_followers_list_item_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\@username"
+            android:textSize="15dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/profile_followers_list_item_username"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:text="follow"
+        android:padding="4dp"
+        android:textSize="12dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/signup_bt_shape"
+        android:layout_marginRight="2dp"
+        android:id="@+id/profile_followers_item_follow_bt"
+        />
+
+</LinearLayout>
