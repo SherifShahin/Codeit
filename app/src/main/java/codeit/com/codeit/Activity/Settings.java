@@ -6,7 +6,6 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telecom.Call;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
@@ -21,9 +20,7 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import java.io.ByteArrayOutputStream;
 
 import codeit.com.codeit.Builders.SettingsBuilder;
-import codeit.com.codeit.Model.LoginResponseBody;
 import codeit.com.codeit.Model.SettingsResponseBody;
-import codeit.com.codeit.Model.Settings_Model;
 import codeit.com.codeit.Model.User;
 import codeit.com.codeit.Model.User_Data;
 import codeit.com.codeit.R;

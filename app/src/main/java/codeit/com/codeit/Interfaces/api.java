@@ -17,7 +17,6 @@ import codeit.com.codeit.Model.ProfileFollowingResponseBody;
 import codeit.com.codeit.Model.ProfileResponseBody;
 import codeit.com.codeit.Model.SearchResponseBody;
 import codeit.com.codeit.Model.SettingsResponseBody;
-import codeit.com.codeit.Model.Settings_Model;
 import codeit.com.codeit.Model.User;
 import codeit.com.codeit.Model.ViewPostResponseBody;
 import codeit.com.codeit.Model.createComment_Model;
