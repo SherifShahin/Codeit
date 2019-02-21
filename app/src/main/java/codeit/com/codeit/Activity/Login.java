@@ -9,8 +9,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import codeit.com.codeit.Builders.LoginBuilder;
 import codeit.com.codeit.Model.LoginResponseBody;
-import codeit.com.codeit.Model.Login_Model;
+import codeit.com.codeit.Model.User;
 import codeit.com.codeit.Model.User_Data;
 import codeit.com.codeit.R;
 import codeit.com.codeit.Remote.Common;
@@ -76,14 +77,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener
             return;
         }
 
+        LoginBuilder builder =new LoginBuilder();
 
-        final Login_Model login_model=new Login_Model();
-
-        login_model.setEmail(useremail);
-        login_model.setPassword(userpassword);
+        User user=builder.reset().setEmail(useremail).setPassword(userpassword).Build();
 
 
-        Call<LoginResponseBody> call= Common.getApi().loginUser(login_model);
+        Call<LoginResponseBody> call= Common.getApi().loginUser(user);
         call.enqueue(new Callback<LoginResponseBody>() {
             @Override
             public void onResponse(Call<LoginResponseBody> call, Response<LoginResponseBody> response)
@@ -111,7 +110,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"your email or password is wrong..try again",Toast.LENGTH_SHORT).show();
                     Login_progressBar.setVisibility(View.INVISIBLE);
                 }
             }

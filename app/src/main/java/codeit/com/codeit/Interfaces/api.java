@@ -1,4 +1,4 @@
-package codeit.com.codeit.Remote;
+package codeit.com.codeit.Interfaces;
 
 import java.util.List;
 
@@ -9,17 +9,16 @@ import codeit.com.codeit.Model.HomePosts_Model;
 import codeit.com.codeit.Model.IsFollowingResponse;
 import codeit.com.codeit.Model.LikesResponseBody;
 import codeit.com.codeit.Model.LoginResponseBody;
-import codeit.com.codeit.Model.Login_Model;
 import codeit.com.codeit.Model.NotificationsResponseBody;
 import codeit.com.codeit.Model.Post;
 import codeit.com.codeit.Model.PostLikesResponseBody;
 import codeit.com.codeit.Model.ProfileFollowerResponseBody;
 import codeit.com.codeit.Model.ProfileFollowingResponseBody;
 import codeit.com.codeit.Model.ProfileResponseBody;
-import codeit.com.codeit.Model.Register_Model;
 import codeit.com.codeit.Model.SearchResponseBody;
 import codeit.com.codeit.Model.SettingsResponseBody;
 import codeit.com.codeit.Model.Settings_Model;
+import codeit.com.codeit.Model.User;
 import codeit.com.codeit.Model.ViewPostResponseBody;
 import codeit.com.codeit.Model.createComment_Model;
 import codeit.com.codeit.Model.create_post_model;
@@ -41,12 +40,12 @@ public interface api
 
     @Headers({"Content-Type: application/json"})
     @POST("users/register")
-    Call<ResponseBody> createUser(@Body Register_Model register);
+    Call<ResponseBody> createUser(@Body User register);
 
 
     @Headers({"Content-Type: application/json"})
     @POST("users/login")
-    Call<LoginResponseBody> loginUser(@Body Login_Model login);
+    Call<LoginResponseBody> loginUser(@Body User login);
 
 
 

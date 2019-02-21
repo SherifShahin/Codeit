@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import codeit.com.codeit.Model.Register_Model;
+import codeit.com.codeit.Builders.RegisterBuilder;
+import codeit.com.codeit.Model.User;
 import codeit.com.codeit.R;
 import codeit.com.codeit.Remote.Common;
 import okhttp3.ResponseBody;
@@ -92,15 +93,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener
         }
 
 
-        Register_Model register_model=new Register_Model();
+        RegisterBuilder builder = new RegisterBuilder();
 
-        register_model.setName(registerName);
-        register_model.setUsername(registerUsername);
-        register_model.setPassword(registerPassword);
-        register_model.setEmail(registerEmail);
+        User user=builder.reset().setName(registerName).setUserName(registerUsername)
+                .setPassword(registerPassword).setEmail(registerEmail).Build();
 
-
-        Call<ResponseBody> call= Common.getApi().createUser(register_model);
+        Call<ResponseBody> call= Common.getApi().createUser(user);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
