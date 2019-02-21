@@ -20,9 +20,11 @@ import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.io.ByteArrayOutputStream;
 
+import codeit.com.codeit.Builders.SettingsBuilder;
 import codeit.com.codeit.Model.LoginResponseBody;
 import codeit.com.codeit.Model.SettingsResponseBody;
 import codeit.com.codeit.Model.Settings_Model;
+import codeit.com.codeit.Model.User;
 import codeit.com.codeit.Model.User_Data;
 import codeit.com.codeit.R;
 import codeit.com.codeit.Remote.Common;
@@ -149,7 +151,8 @@ public class Settings extends AppCompatActivity implements View.OnClickListener
 
     private void update_data()
     {
-        final Settings_Model model=new Settings_Model();
+        SettingsBuilder builder=new SettingsBuilder();
+        builder.reset();
 
         String uname=name.getText().toString();
         String uemail=email.getText().toString();
@@ -164,7 +167,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener
             byte[] imageBytes = baos.toByteArray();
             imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
 
-            model.setImgFile(imageString);
+            builder.setImgfile(imageString);
         }
 
 
@@ -172,10 +175,10 @@ public class Settings extends AppCompatActivity implements View.OnClickListener
         {
             if(!uname.equals(userdata.getName()) && uname.length()>=5)
             {
-                model.setName(uname);
+                builder.setName(uname);
             }
             else
-                model.setName(userdata.getName());
+                builder.setName(userdata.getName());
         }
 
 
@@ -183,26 +186,25 @@ public class Settings extends AppCompatActivity implements View.OnClickListener
         {
             if(!uemail.equals(userdata.getEmail()))
             {
-                model.setEmail(uemail);
+                builder.setEmail(uemail);
             }
             else
-                model.setEmail(userdata.getEmail());
+                builder.setEmail(userdata.getEmail());
         }
 
 
         if(!upassword.isEmpty() && upassword.length() >=8)
         {
-                model.setPassword(upassword);
+                builder.setPassword(upassword);
         }
         else
-            model.setPassword(userdata.getPassword());
+            builder.setPassword(userdata.getPassword());
 
-
-
+        final User user=builder.Build();
 
         progressBar.setVisibility(View.VISIBLE);
 
-        retrofit2.Call<SettingsResponseBody> call= Common.getApi().UpdateUser(userdata.getToken(),userdata.getUsername(),model);
+        retrofit2.Call<SettingsResponseBody> call= Common.getApi().UpdateUser(userdata.getToken(),userdata.getUsername(),user);
 
         call.enqueue(new Callback<SettingsResponseBody>() {
             @Override
@@ -222,7 +224,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener
                  userData.setUsername(responseBody.getUsername());
                  userData.setImg(responseBody.getImg());
                  userData.setEmail(responseBody.getEmail());
-                 userData.setPassword(model.getPassword());
+                 userData.setPassword(user.password);
 
                  sharedPrefManger.save_data(userData);
 

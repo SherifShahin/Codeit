@@ -54,7 +54,7 @@ public interface api
     Call<SettingsResponseBody> UpdateUser(
             @Header("x-auth-token") String token,
             @Path("username") String username,
-            @Body Settings_Model userData
+            @Body User userData
     );
 
 
